@@ -1,0 +1,5 @@
+class Filtro
+	def filtrar(texto)
+		#Devolver texto filtrado
+	end
+end

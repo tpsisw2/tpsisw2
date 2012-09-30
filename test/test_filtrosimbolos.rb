@@ -1,7 +1,7 @@
 require 'test/unit'
 require 'app/filtrosimbolos'
 
-class TestFiltrar < Test::Unit::TestCase
+class TestFiltrarSimbolos < Test::Unit::TestCase
     def test_filtrar
 		expected = "Microsoft"
 		actual = FiltroSimbolos.new.filtrar("M1cr0$0f7")

@@ -2,7 +2,9 @@ class Criterio
 	def initialize(diccionario)
 		@diccionario = diccionario
 	end	
-	def decidir(texto)
-		#Devolver respuesta según criterio
+	def evaluar(texto)
+		@diccionario.definiciones.map { |insulto|
+			Regexp.new(insulto).match(texto)
+		}.compact.length > 0
 	end
 end

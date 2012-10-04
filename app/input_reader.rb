@@ -29,12 +29,3 @@ class FileHandler
     end
 
 end
-
-
-input_reader = InputReader.new
-filename = input_reader.get_filename
-file_handler = FileHandler.new(filename)
-lines = file_handler.get_lines
-puts lines[0]
-
-

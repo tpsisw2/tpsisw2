@@ -16,5 +16,11 @@ textos.each do |texto|
 	#texto = "Este texto contiene p3e333eee3lo7ud0s y debería devolver true"
 	textoFiltrado = Filtro.new.filtrar(texto)
 	diccionario = Diccionario.new
-	puts Criterio.new(diccionario).evaluar(textoFiltrado)
+	res =  Criterio.new(diccionario).evaluar(textoFiltrado)
+	if res
+		puts "Este texto tiene palabras inválidas"
+	else
+		puts "Texto correcto!"	
+	end
+
 end

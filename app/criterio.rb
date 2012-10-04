@@ -4,7 +4,7 @@ class Criterio
 	end	
 	def evaluar(texto)
 		@diccionario.definiciones.map { |insulto|
-			Regexp.new(insulto).match(texto)
+			Regexp.new(insulto.upcase).match(texto.upcase)
 		}.compact.length > 0
 	end
 end

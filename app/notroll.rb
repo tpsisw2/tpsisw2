@@ -1,10 +1,7 @@
-require 'diccionario'
-require 'criterio'
-require 'analizador'
+require 'prohibidos'
 require 'filtrosimbolos'
 require 'filtrorepetidos'
-require 'filtro'
-require 'texto'
+require 'excepciones'
 require 'input_reader'
 
 inputReader = InputReader.new
@@ -13,14 +10,13 @@ file = File.new(filename, 'r')
 textos = file.readlines
 
 textos.each do |texto|
+	seq = [FiltroSimbolos,FiltroRepetidos,Excepciones,Prohibidos]
 	#texto = "Este texto contiene p3e333eee3lo7ud0s y debería devolver true"
-	textoFiltrado = Filtro.new.filtrar(texto)
-	diccionario = Diccionario.new
-	res =  Criterio.new(diccionario).evaluar(textoFiltrado)
+	res = seq.shift.new.do(seq, texto.dup)
 	if res
-		puts "Este texto tiene palabras inválidas"
+		print texto + " Este texto tiene palabras inválidas\n"
 	else
-		puts "Texto correcto!"	
+		print texto + " Texto correcto!\n"	
 	end
 
 end

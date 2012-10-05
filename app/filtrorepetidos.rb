@@ -1,8 +1,10 @@
-class FiltroRepetidos	
+require 'etapa'
+
+class FiltroRepetidos < Etapa
 	#Filtrado de palabras con letras repetidas
-	def filtrar(texto)
-		textofiltrado = texto.dup
-		textofiltrado.squeeze
+	def do(seq, texto)
+		textofiltrado = texto.squeeze
+		prox(seq, textofiltrado)
 	end
 end
 

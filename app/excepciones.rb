@@ -1,4 +1,4 @@
-require 'etapa'
+require 'app/etapa'
 
 class Excepciones < Etapa
 	def definiciones

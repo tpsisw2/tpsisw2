@@ -1,8 +1,8 @@
-require 'prohibidos.rb'
-require 'filtrosimbolos'
-require 'filtrorepetidos'
-require 'excepciones'
-require 'input_reader'
+require 'app/prohibidos'
+require 'app/filtrosimbolos'
+require 'app/filtrorepetidos'
+require 'app/excepciones'
+require 'app/input_reader'
 require "rubygems"
 require "sinatra"
 require "erb"

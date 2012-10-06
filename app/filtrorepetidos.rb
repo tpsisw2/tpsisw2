@@ -1,4 +1,4 @@
-require 'app/etapa.rb'
+require './app/etapa.rb'
 
 class FiltroRepetidos < Etapa
 	#Filtrado de palabras con letras repetidas

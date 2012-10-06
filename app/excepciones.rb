@@ -1,4 +1,4 @@
-require 'app/etapa.rb'
+require './app/etapa.rb'
 
 class Excepciones < Etapa
 	def definiciones

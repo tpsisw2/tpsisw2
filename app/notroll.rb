@@ -3,20 +3,33 @@ require 'filtrosimbolos'
 require 'filtrorepetidos'
 require 'excepciones'
 require 'input_reader'
+require "rubygems"
+require "sinatra"
+require "erb"
 
-inputReader = InputReader.new
-filename = inputReader.get_filename
-file = File.new(filename, 'r')
-textos = file.readlines
+module Comentario
 
-textos.each do |texto|
+  get '/' do
+    answer = ""
+    erb :index, :locals => {:answer => answer}
+  end
+  
+  get '/validar' do
+    erb :index, :locals => {:answer => ""} 
+  end
+
+  post '/validar' do
+
 	seq = [FiltroSimbolos,FiltroRepetidos,Excepciones,Prohibidos]
 	#texto = "Este texto contiene p3e333eee3lo7ud0s y debería devolver true"
+	texto = "#{params[:texto]}"
 	res = seq.shift.new.do(seq, texto.dup)
 	if res
-		print texto + " Este texto tiene palabras inválidas\n"
+		answer = " Este texto tiene palabras inválidas"
 	else
-		print texto + " Texto correcto!\n"	
+		answer =  " Texto correcto!"	
 	end
+	erb :index, :locals => {:answer => answer} 
 
+  end
 end

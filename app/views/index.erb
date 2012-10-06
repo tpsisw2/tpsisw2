@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>NoAlTroll</title>
+    </head>
+<body>
+
+<h1>Ponga su comentario</h1>
+
+
+<form action="/validar" method="POST">
+    <textarea rows="4" cols="50" name="texto"></textarea>
+    <br/>
+    <input type="submit" value="Validar">
+</form>
+
+	<% if answer %>
+      <p><em style="color: green; font-size: 1em;"><%= answer %></em>.
+    <% end %>
+
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-require 'app/prohibidos.rb'
+require './app/prohibidos.rb'
 require 'app/filtrosimbolos.rb'
 require 'app/filtrorepetidos.rb'
 require 'app/excepciones.rb'

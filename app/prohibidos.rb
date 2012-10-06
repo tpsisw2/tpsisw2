@@ -1,4 +1,4 @@
-require 'app/etapa'
+require 'app/etapa.rb'
 
 class Prohibidos < Etapa
 	def definiciones

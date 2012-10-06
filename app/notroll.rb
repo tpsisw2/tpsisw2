@@ -1,4 +1,4 @@
-require 'prohibidos'
+require 'prohibidos.rb'
 require 'filtrosimbolos'
 require 'filtrorepetidos'
 require 'excepciones'
@@ -25,7 +25,7 @@ module Comentario
 	texto = "#{params[:texto]}"
 	res = seq.shift.new.do(seq, texto.dup)
 	if res
-		answer = " Este texto tiene palabras inválidas"
+		answer = " Este texto tiene palabras invalidas"
 	else
 		answer =  " Texto correcto!"	
 	end

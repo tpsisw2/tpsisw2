@@ -1,3 +1,4 @@
+# encoding: UTF-8
 require './app/etapa.rb'
 
 class Prohibidos < Etapa

@@ -2,7 +2,7 @@ require './app/etapa.rb'
 
 class Prohibidos < Etapa
 	def definiciones
-		return ['pelotudo', 'boludo', 'tarado','puta', 'etc...']
+		return ['cagón','idiota','imbecil','jode','maricón','pelotudo', 'boludo', 'tarado','puta', 'marica','nabo','mierda','puto','pelotuda','boluda', 'pajero','pajera', 'tarada','chupa un huevo','garca','trolo']
 	end
 
 	def do(seq, texto)
